@@ -21,13 +21,15 @@ package ca.jrvs.challenge;
  */
 public class MiddleOfTheLinkedList {
     public static ListNode middleNode(ListNode head) {
-        if (head == null)
-            return null;
-        ListNode start = head;
-        while (head != null && head.next != null) {
-            head = head.next.next;
-            start = start.next;
+        if(head==null||head.next==null){
+            return head;
         }
-        return start;
+        ListNode fast=head;
+        ListNode slow = head;
+        while(fast!=null&&fast.next!=null){
+            fast=fast.next.next;
+            slow=slow.next;
+        }
+        return slow;
     }
 }

@@ -28,32 +28,24 @@ package ca.jrvs.challenge;
  * Please do not use the built-in LinkedList library.
  */
 public class MyLinkedList {
-    ListNode dummy;
-    ListNode tail;
-    int length;
+    public ListNode head;
+    public int size;
 
     /**
      * Initialize your data structure here.
      */
     public MyLinkedList() {
-        dummy = new ListNode(-1);
-        tail = dummy;
-        length = 0;
+        size = 0;
+        head = null;
     }
-
 
     /**
      * Get the value of the index-th node in the linked list. If the index is invalid, return -1.
      */
     public int get(int index) {
-        if (index == -1 || index >= length) {
-            return -1;
-        }
-        ListNode cur = dummy;
-        while (index >= 0) {
-            cur = cur.next;
-            index--;
-        }
+        if (index >= size || index < 0) return -1;
+        ListNode cur = head;
+        while (index-- > 0) cur = cur.next; //all nodes in the linked list are 0-indexed
         return cur.val;
     }
 
@@ -61,65 +53,65 @@ public class MyLinkedList {
      * Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
      */
     public void addAtHead(int val) {
-        ListNode head = new ListNode(val);
-        head.next = dummy.next;
-        dummy.next = head;
-        length++;
-        if (tail.next != null) {
-            tail = tail.next;
-        }
+        ListNode temp = head;
+        head = new ListNode(val);
+        head.next = temp;
+        size++;
     }
 
     /**
      * Append a node of value val to the last element of the linked list.
      */
     public void addAtTail(int val) {
-        tail.next = new ListNode(val);
-        tail = tail.next;
-        length++;
+        if (head == null) {
+            head = new ListNode(val);
+        }
+        ListNode temp = head;
+        while (temp.next != null) temp = temp.next;
+        temp.next = new ListNode(val);
+        size++;
     }
-
 
     /**
      * Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted.
      */
     public void addAtIndex(int index, int val) {
-        if (index > length) {
-            return;
-        }
-        ListNode node = new ListNode(val);
-        ListNode cur = dummy;
-        while (index > 0) {
-            cur = cur.next;
-            index--;
-        }
-        node.next = cur.next;
-        cur.next = node;
-        length++;
-        if (tail.next != null) {
-            tail = tail.next;
+        if (index > size) return;
+        else if (index <= 0) addAtHead(val);
+        else {
+            ListNode temp = head;
+            while (index-- > 1) temp = temp.next;
+            ListNode node = new ListNode(val);
+            node.next = temp.next;
+            temp.next = node;
+            size++;
         }
     }
-
 
     /**
      * Delete the index-th node in the linked list, if the index is valid.
      */
     public void deleteAtIndex(int index) {
-        if (index < 0 || index >= length) {
-            return;
+        if (index >= size || size == 0 || index < 0) return;
+        if (index == 0) { //delete head
+            head = head.next;
+        } else {
+            ListNode temp = head;
+            while (index-- > 1) temp = temp.next;
+            temp.next = temp.next.next;
         }
+        size--;
+    }
 
-        ListNode cur = dummy;
-        while (index > 0) {
-            cur = cur.next;
-            index--;
+    /**
+     * Print MyLinkedList object
+     */
+    public void printList(ListNode head) {
+        while (head != null) {
+            System.out.print(head.val + "->");
+            head = head.next;
         }
-        if (cur.next == tail) {
-            tail = cur;
-        }
-        cur.next = cur.next.next;
-        length--;
+        System.out.println();
     }
 
 }
