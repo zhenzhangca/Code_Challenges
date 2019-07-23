@@ -5,12 +5,15 @@ package ca.jrvs.challenge;
  */
 public class BinarySearchTree {
     TreeNode root;
-    public BinarySearchTree(){
+
+    public BinarySearchTree() {
         root = null;
     }
-    public void insert(int val){
+
+    public void insert(int val) {
         root = insertHelper(root, val);
     }
+
     /**
      * A recursive function to insert a new node into BST
      */
