@@ -12,6 +12,7 @@
 - Find the length of a singly linked list
 - Linked List Cycle
 - Find largest and smallest number from an unsorted integer array in Java
+- Merge Sorted Array
 - Middle of the Linked List
 - Missing Number
 - Design Linked List
