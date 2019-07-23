@@ -1,0 +1,27 @@
+# Java Solutions for technical problems
+
+- Check if a number is even or odd
+- Check if a String contains only digits
+- Contains Duplicate
+- Count Primes
+- Fibonacci Number
+- Return duplicate characters(in an array) from a given string
+- Find the Duplicate Number
+- Find the length of a singly linked list
+- Linked List Cycle
+- Find largest and smallest number from an unsorted integer array in Java
+- Middle of the Linked List
+- Missing Number
+- Design Linked List
+- Power of Two
+- Remove Duplicates from Sorted Array
+- Remove Duplicates from an unsorted linked list
+- Remove Element
+- Remove Nth Node From End of List
+- Reverse Linked List
+- Reverse Words in a String
+- Swap two numbers without using the third variable
+- Two Sum
+- Valid Anagram
+- Valid Palindrome
+- Valid Parentheses
