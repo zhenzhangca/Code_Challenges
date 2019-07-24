@@ -1,4 +1,4 @@
-# Java Solutions for technical problems
+# Java Solutions for technical questions
 
 - Implement a binary search tree
 - Check if a number is even or odd
