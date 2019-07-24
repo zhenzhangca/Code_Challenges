@@ -1,7 +1,5 @@
 package ca.jrvs.challenge;
 
-import java.util.Arrays;
-
 /**
  * 88. Merge Sorted Array
  * <p>
@@ -25,10 +23,10 @@ public class MergeSortedArray {
             return;
         }
         int[] nums3 = nums1.clone();
-        // since the question wants to directly change nums1, we let nums3 be a clone of nums1 from where we will get our numbers from without fearing our values getting change from nums1 being change
+        // Since the question wants to directly change nums1, we let nums3 be a clone of nums1 from where we will get our numbers from without fearing our values getting change from nums1 being change
         int i = 0, j = 0; // let i be index point for nums1 and j be index pointer for nums2
         while (i + j < nums1.length) {
-            // if we have used up all numbers from nums2
+            // If we have used up all numbers from nums2
             // or we still have number from nums3 such that that nums3[i] < nums2[j]
             if (j >= n || (i < m && nums3[i] < nums2[j])) {
                 nums1[i + j] = nums3[i++]; // increment i after assigning its current nums3[i] to nums1[i+j]

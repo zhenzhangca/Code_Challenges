@@ -14,6 +14,5 @@ public class FindDuplicateCharactersTest {
         Character[] result2 = FindDuplicateCharacters.findDuplicateCharacters("Java");
         assertEquals("[r, g, m]", Arrays.toString(result1));
         assertEquals("[a]", Arrays.toString(result2));
-
     }
 }

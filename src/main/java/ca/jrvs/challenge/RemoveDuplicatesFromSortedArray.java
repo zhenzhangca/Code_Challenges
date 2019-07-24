@@ -21,7 +21,7 @@ public class RemoveDuplicatesFromSortedArray {
         if (nums == null || nums.length == 0) {
             return 0;
         }
-        //Record the lengh of array without duplicates, if array is not null, the first element will be saved, so count starts from 1
+        //Record the length of array without duplicates, if array is not null, the first element will be saved, so count starts from 1
         int count = 1;
         for (int i = 1; i < nums.length; i++) {
             if (nums[i - 1] != nums[i]) {

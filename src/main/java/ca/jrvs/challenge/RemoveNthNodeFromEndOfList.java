@@ -24,7 +24,6 @@ public class RemoveNthNodeFromEndOfList {
         for (int i = 0; i <= n; i++) {
             faster = faster.next;
         }
-
         while (faster != null) {
             slower = slower.next;
             faster = faster.next;

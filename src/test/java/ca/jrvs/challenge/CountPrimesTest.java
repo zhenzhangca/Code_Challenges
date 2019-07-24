@@ -9,6 +9,6 @@ public class CountPrimesTest {
     @Test
     public void countPrimes() {
         assertEquals(4, CountPrimes.countPrimes(10));
-        assertEquals(2,CountPrimes.countPrimes(4));
+        assertEquals(2, CountPrimes.countPrimes(4));
     }
 }

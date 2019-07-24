@@ -26,6 +26,6 @@ public class PostOrderTraversalTest {
         expect.add(11);
         expect.add(8);
         expect.add(5);
-        assertEquals(expect.toString(),result.toString());
+        assertEquals(expect.toString(), result.toString());
     }
 }

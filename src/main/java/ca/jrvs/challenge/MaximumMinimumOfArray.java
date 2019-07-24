@@ -2,7 +2,6 @@ package ca.jrvs.challenge;
 
 /**
  * Find largest and smallest number from an unsorted integer array in Java.
- *
  */
 public class MaximumMinimumOfArray {
     public static int[] largestAndSmallest(int[] numbers) {

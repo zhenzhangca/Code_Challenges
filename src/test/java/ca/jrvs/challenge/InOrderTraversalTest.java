@@ -27,7 +27,5 @@ public class InOrderTraversalTest {
         expect.add(8);
         expect.add(11);
         assertEquals(expect.toString(), result.toString());
-
-
     }
 }

@@ -2,9 +2,9 @@ package ca.jrvs.challenge;
 
 /**
  * 204. Count Primes
- *
+ * <p>
  * Count the number of prime numbers less than a non-negative number, n.
- *
+ * <p>
  * Example:
  * Input: 10
  * Output: 4
@@ -12,21 +12,20 @@ package ca.jrvs.challenge;
  */
 public class CountPrimes {
     public static int countPrimes(int n) {
-        if (n <= 2){
+        if (n <= 2) {
             return 0;
         }
         boolean[] notPrime = new boolean[n];
         int count = 1;
 
-        for (int i = 3; i < n; i+=2){
+        for (int i = 3; i < n; i += 2) {
             if (!notPrime[i]) {
                 count++;
-                for (int j = 3; i*j < n; j+=2){
-                    notPrime[i*j] = true;
+                for (int j = 3; i * j < n; j += 2) {
+                    notPrime[i * j] = true;
                 }
             }
         }
         return count;
     }
-
 }

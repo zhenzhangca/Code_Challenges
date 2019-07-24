@@ -14,9 +14,9 @@ public class LengthOfLinkedListTest {
         myLinkedList.addAtTail(3);
         myLinkedList.addAtTail(4);
         int length1 = LengthOfLinkedList.getLength(myLinkedList.head);
-        assertEquals(4,length1);
+        assertEquals(4, length1);
         myLinkedList.addAtTail(5);
         int length2 = LengthOfLinkedList.getLength(myLinkedList.head);
-        assertEquals(5,length2);
+        assertEquals(5, length2);
     }
 }

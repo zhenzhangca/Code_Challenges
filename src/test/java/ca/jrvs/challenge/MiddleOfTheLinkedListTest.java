@@ -22,6 +22,5 @@ public class MiddleOfTheLinkedListTest {
         linkedList.printList(linkedList.head);
         ListNode result2 = MiddleOfTheLinkedList.middleNode(linkedList.head);
         assertEquals(4, result2.val);
-
     }
 }

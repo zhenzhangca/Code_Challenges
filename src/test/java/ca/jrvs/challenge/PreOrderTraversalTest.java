@@ -26,6 +26,6 @@ public class PreOrderTraversalTest {
         expect.add(4);
         expect.add(8);
         expect.add(11);
-        assertEquals(expect.toString(),result.toString());
+        assertEquals(expect.toString(), result.toString());
     }
 }

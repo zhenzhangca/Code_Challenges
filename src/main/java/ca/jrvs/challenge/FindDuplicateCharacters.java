@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Find duplicate characters from a given string
  *
- * @return char[]
+ * @return Character[]
  */
 public class FindDuplicateCharacters {
     public static Character[] findDuplicateCharacters(String str) {

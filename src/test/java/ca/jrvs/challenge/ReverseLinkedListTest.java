@@ -17,8 +17,6 @@ public class ReverseLinkedListTest {
         linkedList.printList(linkedList.head);
         ListNode newHead = ReverseLinkedList.reverseList(linkedList.head);
         linkedList.printList(newHead);
-
-
     }
 
 }
