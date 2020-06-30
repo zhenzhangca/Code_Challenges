@@ -38,7 +38,8 @@ public class ReverseIterative {
         }
         System.out.println();
         System.out.println("--iterative--");
-        ListNode currII = reverseI(head);
+        ListNode newHeadI = reverseI(head);
+        ListNode currII = newHeadI;
         while(currII!= null){
             System.out.print(currII.value + "--");
             currII = currII.next;
