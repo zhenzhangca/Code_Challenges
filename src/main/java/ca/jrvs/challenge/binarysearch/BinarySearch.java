@@ -8,6 +8,8 @@ package ca.jrvs.challenge.binarysearch;
  * return 2
  * int target = 9
  * return -1
+ * T = O(log N)
+ * S = O(1)
  */
 public class BinarySearch {
     public static int bs(int[] array, int target){

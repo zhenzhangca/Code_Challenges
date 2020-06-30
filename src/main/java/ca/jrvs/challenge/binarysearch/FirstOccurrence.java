@@ -5,6 +5,8 @@ package ca.jrvs.challenge.binarysearch;
  * int[] array = {0,1,3,4,4,4,4,5,5,5,6}
  * int target = 4, return 3
  * int target = 5, return 7
+ * T = O(log N)
+ * S = O(1)
  */
 public class FirstOccurrence {
     public static int firstOccurrence(int[] array, int target){
